@@ -6,6 +6,8 @@ var num_builders = 5;
 var num_upgraders = 4;
 var num_harvesters = 2;
 
+#hey whats up
+
 module.exports.loop = function () {
 
     for(var name in Memory.creeps) {
