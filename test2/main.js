@@ -6,7 +6,9 @@ var num_builders = 5;
 var num_upgraders = 4;
 var num_harvesters = 2;
 
-#hey whats up
+
+var fun = require('testfun');
+console.log(foo);
 
 module.exports.loop = function () {
 
