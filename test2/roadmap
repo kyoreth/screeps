@@ -12,3 +12,10 @@ Goals per room:
 -create more creeps as resources allow and space.
 -kill enemies in room//defend
 -build structures like roads //towers automatically
+
+
+mining system: runner and miner
+miner:
+  stands and mines
+runner:
+  collects from biggest pile, if still space left -> repeat, else home

@@ -8,7 +8,7 @@ var num_harvesters = 2;
 
 
 var fun = require('testfun');
-console.log(fun.foo);
+console.log(fun.foo());
 
 module.exports.loop = function () {
 
