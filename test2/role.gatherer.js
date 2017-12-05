@@ -2,13 +2,19 @@ var roleGatherer = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-        
+
         if(creep.carry.energy < creep.carryCapacity) {
             var sources = creep.room.find(FIND_DROPPED_RESOURCES);
-            if(creep.pickup(sources[0]) == ERR_NOT_IN_RANGE) {
+            if(creep.pickup(sources[0]) == ERR_NOT_IN_RANGE && sources.length >0) {
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
+                creep.pickup(sources[0]);
             }
-            creep.pickup(sources[0]);
+            else {
+              var sources = creep.room.find(FIND_SOURCES);
+              if(creep.harvest(sources[1]) == ERR_NOT_IN_RANGE) {
+                  creep.moveTo(sources[1], {visualizePathStyle: {stroke: '#ffaa00'}});
+              }  
+            }
         }
         else {
             var targets = creep.room.find(FIND_STRUCTURES, {
